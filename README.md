@@ -20,3 +20,4 @@ https://www.iacr.org/archive/crypto2007/46220242/46220242.pdf - In regards to SH
 http://link.springer.com/chapter/10.1007%2F978-3-540-71039-4_2
 
 https://nodejs.org/en/about/
+http://crypto.stackexchange.com/questions/20649/sha1-collisions-what-about-practical-attacks
