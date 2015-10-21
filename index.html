@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+	
+		<title>COMP4140 - Research Project</title>
+		
+		<link rel='stylesheet' type='text/css' href='client/css/crypto-research.css'/>
+	</head>
+	<body>
+		<section class='container'>
+			<header>
+				Nodejs Server Test
+			</header>
+			<section>
+				<label for='server-address'>Server Address:</label>
+				<input type='text' name='server-address'/>
+								
+				<button class='server-query'>Ping Server</button>
+				<p class='server-response'></p>
+			</section>
+			<footer>
+				
+			</footer>
+		</section>
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="client/crypto-namespace.js"></script>
+		<script>
+			function pingCallback(response) {
+				console.log(response);
+			}
+			
+			$(document).ready(function() {
+				$('input[name="server-address"]').val(
+					'http://localhost:8080'
+				);
+				$("section button.server-query").on('click', function() {
+					var utils = ca.crypto.research.Utils
+						;
+					utils.setServerAddress(
+						$('input[name="server-address"]').val(),
+						$('input[name="server-port"]').val()
+					);
+					utils.pingServer(pingCallback);
+					
+				});
+			});
+		</script>
+	</body>
+
+</html>

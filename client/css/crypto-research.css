@@ -1,0 +1,27 @@
+
+body {
+	height: 100%;
+	display: flex;
+	flex: 1 0 auto;
+	flex-direction: column;
+	background-color: #F5F5F5;
+	align-items: center;
+}
+
+section.container {
+	width: 75%;
+	background-color: #FAFAFA;
+	box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+	margin: 1rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.container header {
+	font-weight: 700; 
+	font-size: 24px;
+	padding: 0.5rem 0 0.5rem 0;
+	text-align: center;
+	border-bottom: 1px solid #E0E0E0;
+	width: 100%;
+}
