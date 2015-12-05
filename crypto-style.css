@@ -1,0 +1,124 @@
+
+
+body, html {
+  height: 100%;
+  background: #F5F5F5;
+}
+
+.content-container {
+  background: #FAFAFA;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0.2px 0 2px rgba(0,0,0,0.2);
+  flex: 1 0 auto;
+  
+}
+
+.content-container header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  border-bottom: 1px solid #E0E0E0;
+  padding: 0 0 2em 0;
+}
+
+.project-title {
+  font-weight: 800;
+  background: black;
+  color: yellowgreen;  
+  font-size: 24px;
+  text-align: center;
+}
+
+.project-class {
+  margin: 0.5em 0;
+  font-style: italic;
+}
+
+.author {
+  font-weight: 800;
+}
+
+.input-section {
+  padding: 2em;
+  text-align: center;
+}
+
+.input-section label {
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.input-section .input-hint {
+  font-size: 10px;
+  font-style: italic;
+}
+
+.output-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.error-output {
+  color: red;
+}
+
+
+
+.result-log {
+  border: 1px solid #E0E0E0;
+  width: 95%;
+  height: 250px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+.result-log .log-row {
+  width: 100%;
+  padding: 0.25em 0;
+}
+
+.result-log .log-row:nth-child(odd) {
+  background: #F0F0F0;
+}
+.result-log .log-row:nth-child(even) {
+  background: inherit;
+}
+
+.content-container section {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em 0;
+}
+
+.optional-inputs {
+  border: 2px solid #E0E0E0;
+  padding: 1em;
+  width: 75%;
+  margin: 0.5em;
+}
+
+.optional-inputs .optional-header {
+  font-weight: bold;
+  text-align: center;
+}
+
+.optional-inputs div.input-pair {
+  display: flex;
+  justify-content: space-between;
+}
+
+.example-section div {
+  text-align: center;
+  font-size: 10px;
+}
+
+.example-message {
+  font-style: italic;
+}

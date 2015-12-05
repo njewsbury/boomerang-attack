@@ -4,51 +4,80 @@
 
 	<head>
 		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 		<meta content="utf-8" http-equiv="encoding">
 	
 		<title>COMP4140 - Research Project</title>
 		
-		<link rel='stylesheet' type='text/css' href='client/css/crypto-research.css'/>
+		<link rel='stylesheet' type='text/css' href='crypto-style.css'/>
 	</head>
 	<body>
-		<section class='container'>
-			<header>
-				Nodejs Server Test
-			</header>
-			<section>
-				<label for='server-address'>Server Address:</label>
-				<input type='text' name='server-address'/>
-								
-				<button class='server-query'>Ping Server</button>
-				<p class='server-response'></p>
-			</section>
-			<footer>
-				
-			</footer>
-		</section>
+    <div class="content-container">
+      
+      <header>
+          <div class="project-title">
+            Analyzing Vulnerabilities in SHA-0
+          </div>
+          <div class="project-class">
+            COMP 4140 Research Project
+          </div>
+          <div class="project-authors">
+            <div>By</div>
+            <div class="author">Tim Sands</div>
+            <div>&amp;</div>
+            <div class="author">Nathan Jewsbury</div>
+          </div>          
+      </header>
+      
+      <section>
+        <div class="input-section">
+          <label for="hash-count">Maximum exponential</label>
+          <input name="hash-count" placeholder="20"/>
+          <button class="start-button">Start Attack</button>
+          <div class="input-hint">
+          The maximum exponential limits the number of hashes generated. Maximum hashes will be (2<sup>n</sup>), with n being the input
+          </div>
+          <div class="error-output">
+          </div>
+        </div>
+        <div class="optional-inputs">
+          <div class="optional-header">
+            Optional Inputs - Analyze Test Cases
+          </div>
+          <div>
+            <div class="input-pair">
+              <label for="round-count">Number of Rounds</label>
+              <input name="round-count" placeholder="80"/>
+            </div>
+            <div class="input-pair">
+              <label for="precomputed-msg">PreComputed Message</label>
+              <input name="precomputed-msg"/>
+            </div>
+            <div class="example-section">
+              <div>
+                Example pre-computed message
+              </div>
+              <div class="example-message">
+                78fb128577a2dc844035a90bb61f0b394a4d1c83186e8429743269887f220f79a08e792016a3e4692ed4213d4a75b90438bef7882274a40c4c14e934cee12cec using 35 rounds
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="output-section">
+          <div class="result-log">
+          </div>
+        </div>
+      </section>    
+    </div>
 		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-		<script src="client/crypto-namespace.js"></script>
-		<script>
-			function pingCallback(response) {
-				console.log(response);
-			}
-			
-			$(document).ready(function() {
-				$('input[name="server-address"]').val(
-					'http://localhost:8080'
-				);
-				$("section button.server-query").on('click', function() {
-					var utils = ca.crypto.research.Utils
-						;
-					utils.setServerAddress(
-						$('input[name="server-address"]').val(),
-						$('input[name="server-port"]').val()
-					);
-					utils.pingServer(pingCallback);
-					
-				});
-			});
-		</script>
+    <script src="sha-attack.js"></script>
+    <script src="perturb-util.js"></script>
+    <script src="console-utils.js"></script>
+    <script src="core.js"></script>
+    <script src="sha0.js"></script>
+    <!-- MAIN SCRIPT -->
+    <script src="web-main.js"></script>
 	</body>
 
 </html>
