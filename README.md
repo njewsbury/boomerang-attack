@@ -1,15 +1,12 @@
 ## COMP 4140 - Research Project Proposal ##
-### Web-Based Boomerang Attack ###
-#### Finding Collisions in SHA-0 ####
+### Analyzing Vulnerabilities in SHA-0 ###
+#### Searching for Collisions in SHA-0 ####
 By: Nathan Jewsbury (7614402) & Tim Sands (7688626)
 ___
 
-The family of Secure Hash Algorithms (SHA) are still actively used in a number of applications. Recently, however, many organizations have deprecated the use of SHA0 and SHA1 algorithms due to weaknesses found. Between 2004 and 2008 a series of attacks were performed that reduced the number of operations required to find collisions in both SHA-0 and SHA-1.
+Cryptographic hash functions are commonplace in many web based applications and in signed communications. One commonly used family of Cryptographic hashes is the "Secure Hash Algorithm" or SHA family developed by the United States National Security Agency (NSA) and published by the National Institute of Standards and Technology (NIST). SHA or SHA-0 as it was later known was the first published algorithm in the SHA family, however it was determined to be too vulnerable and it was quickly replaced by SHA-1. 
 
-This project seeks to replicate one such attack, the Boomerang Attack, found in 2008 using an easily accessible entry point: Web Facing clients. Through brief searching no such project has been completed before, this attack is typically completed offline. Depending on the parallelizability of the Boomerang attack a nodejs server could be introduced, to offload the attack onto willing clients, decreasing the overall wait time for requesting clients.
-While specifically targeting SHA-0, this implementation may also have application on other hashing functions such as SHA-1 which was more widely adopted.
-
-Topics covered by this project will be focused on three areas. The hashing algorithm implementation and the theoretical limits SHA-0 offers, implementations of the Boomerang attack and its recent advancements and the power of modern browsers to implement such attacks. When the attack on SHA-0 was discovered, in 2008, the number of operations to find such collisions was 2^33.6 taking roughly one hour on an average PC. Using the results from 2008 as a base line, determining performance using modern day browsers and hardware would also be of interest.
+The goal of this project is to explore the vulnerability of SHA-0 and provide analysis of modern attack methods. The most popular attack method uses a combination of techniques stemming from the Boomerang attack. Previous attacks with optimized conditions resulted in a collision in roughly an hour after computing an estimated 233 hashes performed by Manuel and Peyrin in 2008.
 
 
 ### References ###
