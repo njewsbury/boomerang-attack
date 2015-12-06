@@ -121,13 +121,13 @@ For Comp 4140 Research Project.
      *     var hash = CryptoJS.SHA0(wordArray);
      */
     C.SHA0 = Hasher._createHelper(SHA0);
-    
+
     /**
      * Allows user defined round maximum. The number of rounds SHA0 will
      * process before returning.
-     * 
+     *
      * @param {int} The number of rounds to process before quitting.
-     * 
+     *
      * @example
      *
      *  CryptoJS.SHA0.setRounds(80);

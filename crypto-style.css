@@ -1,4 +1,12 @@
+/*
+    COMP 4140 - RESESARCH PROJECT
+    Analyzing Vulnerabilities in SHA-0
 
+    @for COMP 4140 - Research Project
+    @author Tim Sands
+    @author Nathan Jewsbury
+    @date December 4 2015
+ */
 
 body, html {
   height: 100%;
@@ -11,7 +19,7 @@ body, html {
   flex-direction: column;
   box-shadow: 0.2px 0 2px rgba(0,0,0,0.2);
   flex: 1 0 auto;
-  
+
 }
 
 .content-container header {
@@ -26,7 +34,7 @@ body, html {
 .project-title {
   font-weight: 800;
   background: black;
-  color: yellowgreen;  
+  color: yellowgreen;
   font-size: 24px;
   text-align: center;
 }
@@ -59,7 +67,7 @@ body, html {
   width: 100%;
   display: flex;
   justify-content: center;
-  
+
 }
 
 .error-output {
